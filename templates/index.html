@@ -9,7 +9,7 @@
 
 <link rel="icon" 
       type="image/png" 
-      href="Police-Officer-icon.png">
+      href="{{ url_for('static', filename='Police-Officer-icon.png') }}">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta charset=utf-8 />
 <title>Street Level Crime Navigator</title>
-<script src='leaflet.js'></script>
-              <link href='leaflet.css' rel='stylesheet' />
+<script src="{{ url_for('static', filename='leaflet.js') }}"></script>
+              <link href="{{ url_for('static', filename='leaflet.css') }}" rel='stylesheet' />
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 
