@@ -90,7 +90,16 @@ margin-top: 0px;
 
 <body>
 
+ <script type="text/javascript" src="{{ url_for('static', filename='authConfig.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='graphConfig.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='ui.js') }}"></script>
 
+  <!-- <script type="text/javascript" src="{{ url_for('static', filename='authRedirect.js') }}"></script>   -->
+  <!-- uncomment the above line and comment the line below if you would like to use the redirect flow -->
+  <script type="text/javascript" src="{{ url_for('static', filename='authPopup.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='graph.js') }}"></script>
+      
+      
 
 <div id='map'></div>
 <input style="position: absolute; right: 1%; width: 30%" type="text" id="key" placeholder="Google Maps Geocode API Key" title="From registered application" onclick = 'document.getElementById("key").style.color= "black"'>
