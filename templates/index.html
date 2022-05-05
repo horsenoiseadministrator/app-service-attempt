@@ -131,9 +131,20 @@ margin-top: 0px;
 
 <script>
 
+var havails= new XMLHttpRequest();
 
+    havails.open("POST", "https://data.police.uk/api/crimes-street-dates", false);
+    
 
+    havails.send();
 
+alert(havails.responseText);
+      console.log(havails.responseText);
+      
+var havail = JSON.parse(havails.responseText); 
+
+alert(havail);
+      console.dog(havail);
 // search data.police.uk for available months of data to populate the dropdown
 
 var avails= new XMLHttpRequest();
