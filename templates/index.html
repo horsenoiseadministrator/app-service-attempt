@@ -90,15 +90,7 @@ margin-top: 0px;
 
 <body>
 
- <script type="text/javascript" src="{{ url_for('static', filename='authConfig.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='graphConfig.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='ui.js') }}"></script>
-
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='authRedirect.js') }}"></script>   -->
-  <!-- uncomment the above line and comment the line below if you would like to use the redirect flow -->
-  <script type="text/javascript" src="{{ url_for('static', filename='authPopup.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='graph.js') }}"></script>
-      
+    
       
 
 <div id='map'></div>
@@ -142,14 +134,12 @@ margin-top: 0px;
 
 var havails= new XMLHttpRequest();
 
-    havails.open("POST", "https://graph.microsoft.com/v1.0/me/", false);
+    havails.open("GET", "/.auth/me", false);
     
-
     havails.send();
 
 alert(havails.responseText);
-      console.log(havails.responseText);
-      
+         
 var havail = JSON.parse(havails.responseText); 
 
 alert(havail);
